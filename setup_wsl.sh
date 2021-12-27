@@ -18,6 +18,7 @@ passwd $_USER
 su -l $_USER
 
 git config --global credential.helper store
+git config --global pull.rebase true
 git config --global user.email $USER_EMAIL
 git config --global user.name $USER_NAME
 
