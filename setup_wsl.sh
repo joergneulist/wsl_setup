@@ -31,5 +31,7 @@ mkdir -p ~/repos
 cd ~/repos
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
+yay -Syu python3.9
+
 # Uncomment if systemd is needed
 #yay -S genie-systemd-git
