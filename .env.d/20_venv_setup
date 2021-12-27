@@ -24,7 +24,7 @@ function venv_create
 {
 	local name=$1
 	shift
-	virtualenv $* "$venv_path/$name"
+	virtualenv $* "$VENV_PATH/$name"
 	venv_activate $name
 	python -m pip install ipykernel
 	python -m ipykernel install --user --name=$name
