@@ -1,0 +1,42 @@
+export VENV_PATH=$(readlink -f ~/.local/venv/)
+
+function venv_activate
+{
+	if [ -n "$1" ]
+	then
+		. $VENV_PATH/$1/bin/activate
+	fi
+}
+
+function venv_check
+{
+	if [ -z "$VIRTUAL_ENV" ]
+	then
+		echo "No virtual environment is active"
+	else
+		env_name=$(echo $VIRTUAL_ENV | rev | cut -d/ -f1 | rev)
+		echo "Virtual environment '$env_name' is active:"
+		echo $VIRTUAL_ENV
+	fi
+}
+
+function venv_create
+{
+	local name=$1
+	shift
+	virtualenv $* "$venv_path/$name"
+	venv_activate $name
+	python -m pip install ipykernel
+	python -m ipykernel install --user --name=$name
+}
+
+function venv_deactivate
+{
+	deactivate
+}
+
+function venv
+{
+	venv_activate $*
+	venv_check
+}
