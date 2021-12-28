@@ -1,6 +1,6 @@
 export PACKAGES="grml-zsh-config jupyterlab sudo vim"
-export LIN_USER=joerg
 export WIN_USER=joerg
+export LIN_USER=$WIN_USER
 export USER_SHELL=/usr/bin/zsh
 export USER_EMAIL="joerg@neulist.de"
 export USER_NAME="Joerg Neulist"
