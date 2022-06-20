@@ -15,7 +15,7 @@ mkdir -p ~/jupyter/repos
 
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay
 
-yay -Syu python39
+yay -Syu code-server exa oh-my-zsh-git python39
 mkdir -p ~/.local/venv
 
 IP==$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
