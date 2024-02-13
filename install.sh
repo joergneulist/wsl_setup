@@ -27,8 +27,3 @@ curl -fsSLo $INSTALLER https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/
 chmod a+x $INSTALLER
 ZSH=$OMZ_DIR $INSTALLER --unattended
 echo "for f in $BASE/.env.d/*; do source \$f; done" > $OMZ_DIR/custom/env.zsh
-
-#IP==$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
-#touch ~/.Xauthority
-#xauth add $IP:0.0 . $(dd if=/dev/random bs=1024 count=1 of=/dev/stdout 2>/dev/null | md5sum | cut -f1 -d\ )
-#cp ~/.Xauthority ~/winhome/
