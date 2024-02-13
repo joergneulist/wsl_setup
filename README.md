@@ -1,3 +1,6 @@
+# DEPRECATED
+I switched back to using Ubuntu, see the main branch. This stuff is old and probably not up to date.
+
 # Setup Arch Linux on WSL
 Setup WSL2 especially with respect to jupyter lab in virtual environments.
 
