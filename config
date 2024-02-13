@@ -1,6 +1,8 @@
-export PACKAGES="grml-zsh-config jupyterlab sudo vim"
-export WIN_USER=joerg
-export LIN_USER=$WIN_USER
+export WIN_USER=joerg.neulist
 export USER_SHELL=/usr/bin/zsh
-export USER_EMAIL="joerg@neulist.de"
+export USER_EMAIL="joerg.neulist@appsphere.de"
 export USER_NAME="Joerg Neulist"
+
+export OMZ_DIR=.omz
+export JUPY_DIR=jupy
+export JUPYTER_EXT=jupyter-pep8
