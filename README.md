@@ -2,7 +2,8 @@
 Setup WSL2 especially with respect to jupyter lab in virtual environments.
 
 ## Step 1: Enable WSL2 and get the kernel update
-* (Admin PowerShell) `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
+* Open an Admin PowerShell
+* `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
 * `wsl --set-default-version 2` to enable WSL2 - if it asks for a kernel update, install that
 
 ## Step 2: Install Linux distro
@@ -14,3 +15,4 @@ Setup WSL2 especially with respect to jupyter lab in virtual environments.
 * Look into `wsl_setup/config` and adapt the settings where necessary
 * Execute `install.sh` and wait until it is done
 * This will update the system, install a very few nice tools, plus oh-my-zsh, and setup a poetry env with jupyter lab in it
+* Exit WSL and launch it again
