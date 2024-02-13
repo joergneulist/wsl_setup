@@ -1,6 +1,5 @@
-export MY_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
-export DISPLAY=$MY_IP:0.0
-export PULSE_SERVER=tcp:$MY_IP
+#export MY_IP=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
+#export DISPLAY=$MY_IP:0.0
+#export PULSE_SERVER=tcp:$MY_IP
 
-export $(dbus-launch)
 export BROWSER=sensible-browser
