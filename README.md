@@ -1,18 +1,24 @@
 # Setup Ubuntu Linux on WSL
 Setup WSL2 especially with respect to jupyter lab in virtual environments.
 
-## Step 1: Enable WSL2 and get the kernel update
-* Open an Admin PowerShell
-* `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`
-* `wsl --set-default-version 2` to enable WSL2 - if it asks for a kernel update, install that
+## Step 1: Admin Powershell
+```
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+wsl --set-default-version 2
+wsl --install ubuntu
+```
 
-## Step 2: Install Linux distro
-* `wsl --install ubuntu`
-* Follow the setup, it drops you right on the new system prompt
+Follow the setup, it drops you right on the new linux system prompt.
 
-## Step 3: Set up Linux
-* `git clone https://github.com/joergneulist/wsl_setup.git`
-* Look into `wsl_setup/config` and adapt the settings where necessary
-* Execute `install.sh` and wait until it is done
-* This will update the system, install a very few nice tools, plus oh-my-zsh, and setup a poetry env with jupyter lab in it
-* Exit WSL and launch it again
+## Step 2: Set up Linux
+```
+git clone https://github.com/joergneulist/wsl_setup.git
+```
+
+Examine `wsl_setup/config` and adapt the settings where necessary.
+
+```
+wsl_setup/install.sh
+```
+
+This script will update the system, install a very few nice tools, plus oh-my-zsh, and setup a poetry env with jupyter lab in it. After it's done, you should exit WSL and launch it again to activate the new shell.
