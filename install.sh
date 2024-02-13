@@ -1,7 +1,8 @@
 #!/bin/bash
 
-BASE=$(readlink -f $(dirname $0))
+sudo .install_root.sh
 
+BASE=$(readlink -f $(dirname $0))
 source $BASE/config
 
 git config --global credential.helper store
