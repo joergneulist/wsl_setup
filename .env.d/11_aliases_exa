@@ -1,3 +1,5 @@
-alias ls='exa --git'
-alias la='ls -A'
+alias ls='exa'
+alias l='ls --long'
+alias la='l --all'
+alias ll='l'
 
