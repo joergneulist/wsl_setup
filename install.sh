@@ -11,7 +11,7 @@ git config --global user.name $USER_NAME
 
 ln -s /mnt/c/users/$WIN_USER ~/winhome
 
-install -D -t ~/.jupyter $BASE/install/jupyter_lab_config.py
+install -D -t ~/.jupyter $BASE/files/jupyter_lab_config.py
 
 poetry new $JUPY_DIR
 pushd $JUPY_DIR
@@ -19,14 +19,11 @@ poetry add ipykernel jupyter pandas $JUPYTER_EXT
 poetry install
 popd
 
-# OH MY ZSH
-# ZSH=~/$OMZ_DIR
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# echo "for f in $BASE/.env.d/\*
-#do
-#        source $f
-#done" > ~/$OMZ_DIR/custom/custom_env.zsh
-
+INSTALLER=$(mktemp)
+curl -fsSLo $INSTALLER https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+chmod a+x $INSTALLER
+ZSH=$OMZ_DIR $INSTALLER --unattended
+echo "for f in $BASE/.env.d/*; do source \$f; done" > $OMZ_DIR/custom/custom_env.zsh
 
 #IP==$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}')
 #touch ~/.Xauthority

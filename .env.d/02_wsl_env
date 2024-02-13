@@ -3,7 +3,4 @@ export DISPLAY=$MY_IP:0.0
 export PULSE_SERVER=tcp:$MY_IP
 
 export $(dbus-launch)
-export BROWSER=/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe
-
-export GDK_SCALE=2
-export QT_SCALE_FACTOR=2
+export BROWSER=sensible-browser

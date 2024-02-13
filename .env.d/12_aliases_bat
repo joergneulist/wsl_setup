@@ -1,4 +1,4 @@
-alias cat='bat'
+alias bat='batcat'
 alias more='bat'
 alias less='bat'
 

@@ -3,6 +3,6 @@ export USER_SHELL=/usr/bin/zsh
 export USER_EMAIL="joerg.neulist@appsphere.de"
 export USER_NAME="Joerg Neulist"
 
-export OMZ_DIR=.omz
+export OMZ_DIR=~/.omz
 export JUPY_DIR=jupy
 export JUPYTER_EXT=jupyter-pep8
