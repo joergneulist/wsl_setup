@@ -4,5 +4,5 @@ export USER_EMAIL="joerg.neulist@appsphere.de"
 export USER_NAME="Joerg Neulist"
 
 export OMZ_DIR=~/.omz
-export JUPY_DIR=jupy
-export JUPYTER_EXT=jupyter-pep8
+export JUPYTER_ENV=jupy
+export BROWSER="/mnt/c/users/$WIN_USER/AppData/Local/Mozilla Firefox/firefox.exe"
