@@ -6,7 +6,7 @@ source $BASE/config
 write_env_loader() 
 {
     echo 'export BROWSER="'$BROWSER'"'
-    echo 'for f in $BASE/.env.d/*'
+    echo 'for f in '$BASE'/.env.d/*'
     echo 'do'
     echo '    source $f'
     echo 'done'
