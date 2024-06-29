@@ -1,8 +1,8 @@
 export WIN_USER=joerg.neulist
 export USER_SHELL=/usr/bin/zsh
-export USER_EMAIL="joerg.neulist@appsphere.de"
+export USER_EMAIL="joerg.neulist@appsphere.com"
 export USER_NAME="Joerg Neulist"
 
 export OMZ_DIR=~/.omz
 export JUPYTER_ENV=jupy
-export BROWSER="/mnt/c/users/$WIN_USER/AppData/Local/Mozilla Firefox/firefox.exe"
+export BROWSER="/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
