@@ -1,6 +1,6 @@
-export WIN_USER=joerg.neulist
+export WIN_USER=joerg
 export USER_SHELL=/usr/bin/zsh
-export USER_EMAIL="joerg.neulist@appsphere.com"
+export USER_EMAIL="wsl.$(hostname)@joerg.neulist.de"
 export USER_NAME="Joerg Neulist"
 
 export OMZ_DIR=~/.omz
