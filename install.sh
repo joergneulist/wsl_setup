@@ -38,6 +38,7 @@ install -D -t ~/.jupyter $BASE/files/jupyter_lab_config.py
 write_jupyter_loader > ~/.run_jupyter.sh
 chmod a+x ~/.run_jupyter.sh
 popd
+./winlink.sh -c jupyterlab -i resource/jupyterlab.ico .run_jupyter.sh
 
 echo '###################### INSTALL OH-MYZSH'
 INSTALLER=$(mktemp)
