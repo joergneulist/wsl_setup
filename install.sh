@@ -51,7 +51,6 @@ echo '###################### UPDATE SYSTEM'
 sudo "$BASE/.install_root.sh" $(whoami)
 ln -s "/mnt/c/users/$WIN_USER" ~/winhome
 mkdir -p ~/winhome/"$WIN_BIN" ~/winhome/"$WIN_ICO"
-pip install poetry vmd
 
 echo '###################### CONFIGURE GIT'
 git config --global credential.helper store
