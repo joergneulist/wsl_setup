@@ -70,9 +70,12 @@ popd
 make_link jupyterlab "Jupyter Lab" "$(readlink -f ~/.run_jupyter.sh)" "$BASE/files/jupyterlab.ico"
 
 echo '###################### CONFIGURE FISH'
+FISH_CONF="~/.config/fish/conf.d/"
+
 fish -c "set -U fish_user_paths ~/.local/bin $fish_user_paths"
+mkdir -p $FISH_CONF
 for f in "$BASE/.env.d/*"
 do
-	cp $f ~/.config/fish/conf.d/
+	cp $f $FISH_CONV
 done
 
