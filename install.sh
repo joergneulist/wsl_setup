@@ -69,10 +69,10 @@ chmod a+x ~/.run_jupyter.sh
 popd
 make_link jupyterlab "Jupyter Lab" "$(readlink -f ~/.run_jupyter.sh)" "$BASE/files/jupyterlab.ico"
 
-echo '###################### INSTALL OH-MYZSH'
-INSTALLER="$(mktemp)"
-curl -fsSLo "$INSTALLER" https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
-chmod a+x "$INSTALLER"
-ZSH="$OMZ_DIR" "$INSTALLER" --unattended
-write_env_loader > "$OMZ_DIR/custom/env.zsh"
+echo '###################### CONFIGURE FISH'
+fish -c "set -U fish_user_paths ~/.local/bin $fish_user_paths"
+for f in "$BASE/.env.d/*"
+do
+	cp $f ~/.config/fish/conf.d/
+done
 

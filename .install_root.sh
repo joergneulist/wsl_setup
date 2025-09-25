@@ -2,5 +2,5 @@
 
 apt update
 apt dist-upgrade -y
-apt install -y bat eza python3 python3-pip python3-poetry zsh
+apt install -y bat eza fish neovim python3 python3-poetry
 chsh $1 -s /usr/bin/zsh
