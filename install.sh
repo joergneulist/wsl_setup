@@ -57,6 +57,7 @@ git config --global credential.helper store
 git config --global pull.rebase true
 git config --global user.email "$USER_EMAIL"
 git config --global user.name "$USER_NAME"
+git config --global core.editor "$EDITOR"
 
 echo '###################### CONFIGURE JUPYTER'
 poetry new "$JUPYTER_ENV"
@@ -71,6 +72,8 @@ make_link jupyterlab "Jupyter Lab" "$(readlink -f ~/.run_jupyter.sh)" "$BASE/fil
 
 echo '###################### CONFIGURE FISH'
 fish -c "set -U fish_user_paths ~/.local/bin $fish_user_paths"
+fish -c "set -U BROWSER $BROWSER"
+fish -c "set -U EDITOR $EDITOR"
 
 FISH_CONF=~/.config/fish/conf.d/
 echo Create $FISH_CONF
