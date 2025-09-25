@@ -2,7 +2,6 @@ export USER_SHELL=/usr/bin/fish
 export USER_EMAIL=""
 export USER_NAME="Joerg Neulist"
 
-export OMZ_DIR=~/.omz
 export JUPYTER_ENV=jupy
 export BROWSER="/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
 
