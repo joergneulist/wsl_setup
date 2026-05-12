@@ -75,8 +75,14 @@ fish -c "set -U fish_user_paths ~/.local/bin $fish_user_paths"
 fish -c "set -U BROWSER $BROWSER"
 fish -c "set -U EDITOR $EDITOR"
 
-FISH_CONF=~/.config/fish/conf.d/
-echo Create $FISH_CONF
-mkdir -p $FISH_CONF
-cp -a $BASE/.env.d/* $FISH_CONF
+FISH_CONF=~/.config/fish
+FISH_CONF_D=$FISH_CONF/conf.d/
+echo Create $FISH_CONF_D
+mkdir -p $FISH_CONF_D
+cp -a $BASE/.env.d/* $FISH_CONF_D
 
+echo '###################### INSTALL NVM'
+git clone https://github.com/nvm-sh/nvm.git .nvm
+curl https://git.io/fisher --create-dirs -sLo $FISH_CONF/functions/fisher.fish
+fisher install edc/bass
+install -D -t $FISH_CONF/functions "$BASE/files/nvm.fish"
